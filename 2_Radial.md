@@ -1,9 +1,9 @@
-## Mendelian Randomization 
+### Mendelian Randomization 
 
 	- **Author(s):** Sara Bandres-Ciga
 	- **Date Last Updated:** 9.05.2019
 
-## R code
+### R code
 
 library(data.table)
 library(TwoSampleMR)
@@ -12,7 +12,6 @@ library(MRInstruments)
 install.packages("WSpiller/RadialMR")
 library("RadialMR")
 
-```
 
 ### Format SumStats
 
