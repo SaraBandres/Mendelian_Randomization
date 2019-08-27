@@ -4,6 +4,7 @@
 	- **Date Last Updated:** 9.05.2019
 
 ### R code
+```
 
 library(data.table)
 library(TwoSampleMR)
@@ -11,8 +12,10 @@ install.packages("MRinstruments")
 library(MRInstruments)
 install.packages("WSpiller/RadialMR")
 library("RadialMR")
+```
 
 ### Format SumStats
+```
 
 DLBtemp< -fread("/data/LNG/MR/DLB.tbl", header = T)
 HRCtemp <- fread("/data/LNG/MR/chrBpIndexRs.tab", header = F)
@@ -24,8 +27,10 @@ DLB <- merge(DLBtemp, HRC, by = "index")
 DLB$effect_allele <- toupper(as.character(DLB$Allele1))
 DLB$other_allele <- toupper(as.character(DLB$Allele2))
 Out_data <- format_data(DLB, type="outcome", beta_col = "Effect", se_col = "StdErr", eaf_col = "Freq1", pval_col = "P-value")
+```
 
 ### Run MR analysis
+```
 
 #token <- get_mrbase_access_token()
 token <- "ya29.Glt2BSKxkLWJCzEV6_L_QL9fEfQnMdHDnAGeOy-4wl-6sSFz2HuyV2azTIlI73Wa9Qiehd2b7UhjyFDi1BcP-Uwd2xj3OnJAQKp-xZnOHvySYSjisnLdhOOVYaye"
@@ -63,3 +68,4 @@ for(i in 1:401)
   }
 }
 #q(no)
+```
