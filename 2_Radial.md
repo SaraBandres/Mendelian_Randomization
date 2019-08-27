@@ -2,8 +2,8 @@
 
 	- **Author(s):** Sara Bandres-Ciga
 	- **Date Last Updated:** 9.05.2019
-```
-### R code
+
+## R code
 
 library(data.table)
 library(TwoSampleMR)
@@ -11,6 +11,7 @@ install.packages("MRinstruments")
 library(MRInstruments)
 install.packages("WSpiller/RadialMR")
 library("RadialMR")
+
 ```
 
 ### Format SumStats
@@ -25,7 +26,7 @@ DLB <- merge(DLBtemp, HRC, by = "index")
 DLB$effect_allele <- toupper(as.character(DLB$Allele1))
 DLB$other_allele <- toupper(as.character(DLB$Allele2))
 Out_data <- format_data(DLB, type="outcome", beta_col = "Effect", se_col = "StdErr", eaf_col = "Freq1", pval_col = "P-value")
-```
+
 
 ### Run MR analysis
 
@@ -57,4 +58,5 @@ else
 print("FAIL")
 }
 #q(no)
+
 ```
