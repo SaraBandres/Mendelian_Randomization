@@ -25,7 +25,7 @@ DLB <- merge(DLBtemp, HRC, by = "index")
 DLB$effect_allele <- toupper(as.character(DLB$Allele1))
 DLB$other_allele <- toupper(as.character(DLB$Allele2))
 Out_data <- format_data(DLB, type="outcome", beta_col = "Effect", se_col = "StdErr", eaf_col = "Freq1", pval_col = "P-value")
-
+```
 
 ### Run MR analysis
 ```
