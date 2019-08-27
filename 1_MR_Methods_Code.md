@@ -17,7 +17,7 @@ library("RadialMR")
 ### Format SumStats
 ```
 
-DLBtemp <-fread("/data/LNG/MR/DLB.tbl", header = T)
+DLBtemp <- fread("/data/LNG/MR/DLB.tbl", header = T)
 HRCtemp <- fread("/data/LNG/MR/chrBpIndexRs.tab", header = F)
 names(HRCtemp) <- c("index","SNP","b")
 HRC <- subset(HRCtemp, SNP != ".")
