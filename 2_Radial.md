@@ -4,17 +4,17 @@
 	- **Date Last Updated:** 9.05.2019
 
 ### R code
-
+```
 library(data.table)
 library(TwoSampleMR)
 install.packages("MRinstruments")
 library(MRInstruments)
 install.packages("WSpiller/RadialMR")
 library("RadialMR")
-
+```
 
 ### Format SumStats
-
+```
 DLBtemp< -fread("/data/LNG/MR/DLB.tbl", header = T)
 HRCtemp <- fread("/data/LNG/MR/chrBpIndexRs.tab", header = F)
 names(HRCtemp) <- c("index","SNP","b")
@@ -28,7 +28,7 @@ Out_data <- format_data(DLB, type="outcome", beta_col = "Effect", se_col = "StdE
 
 
 ### Run MR analysis
-
+```
 #token <- get_mrbase_access_token()
 token <- "ya29.Glt2BSKxkLWJCzEV6_L_QL9fEfQnMdHDnAGeOy-4wl-6sSFz2HuyV2azTIlI73Wa9Qiehd2b7UhjyFDi1BcP-Uwd2xj3OnJAQKp-xZnOHvySYSjisnLdhOOVYaye"
 possibleInstruments <- available_outcomes(access_token = token)
@@ -57,5 +57,3 @@ else
 print("FAIL")
 }
 #q(no)
-
-```
