@@ -3,11 +3,13 @@
 	- **Date Last Updated:** 9.05.2019
 
 ### R code ###
-
+```
 library(data.table)
 library(TwoSampleMR)
+```
 
 ### Format PD sumStats ###
+```
 ALStemp <- fread("~/Desktop/mendelRandoAuto/SummaryStats/ALS/alsMetaSummaryStats_march21st2018.tab", header = T)
 HRCtemp <- fread("~/Desktop/mendelRandoAuto/SummaryStats/PD/chrPosRs.tab", header = F)
 names(HRCtemp) <- c("index","SNP")
@@ -28,3 +30,4 @@ mvdat <- mv_harmonise_data(exposure_dat, Out_data)
 res <- mv_multiple(mvdat)
 write.table(res, file ="Results.Multivariable.table", na = "NA", quote = F, row.names = F, sep = "\t")
 #q(no)
+```
